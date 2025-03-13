@@ -13,7 +13,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'docker compose up -d --compatibility'
+                sh 'docker compose --compatibility'
+                sh 'docker compose up -d'
             }
         }
     }
